@@ -1,11 +1,12 @@
 import React from 'react';
+import { Main, Banner } from './Section.styled';
 
 const Section = ({ text, childComponentFilter, childComponent }) => (
-  <div>
-    <h1>{text}</h1>
+  <Main>
+    <Banner>{text}</Banner>
     {childComponentFilter}
     {childComponent}
-  </div>
+  </Main>
 );
 
 export default Section;
