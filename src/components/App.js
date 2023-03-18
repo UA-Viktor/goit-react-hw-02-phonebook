@@ -4,7 +4,8 @@ import { nanoid } from 'nanoid';
 import { Notify } from 'notiflix';
 
 import Section from './Section/Section';
-import Form from './Form/Form';
+// import Form from './Form/Form';
+import ContactForm from './Form/FormFormik';
 import Contacts from './Contacts/Contacts';
 import Filter from './Filter/Filter';
 
@@ -35,7 +36,6 @@ class App extends Component {
       contacts: [...prevState.contacts, dataWithId],
     }));
   };
-  onDeleteContact;
 
   deleteContact = contactId => {
     this.setState(prevState => ({
@@ -64,7 +64,8 @@ class App extends Component {
       <>
         <Section
           text="Phonebook"
-          childComponent={<Form onSubmit={this.formSubmitHandler} />}
+          // childComponent={<Form onSubmit={this.formSubmitHandler} />}
+          childComponent={<ContactForm onSubmit={this.formSubmitHandler} />}
         />
 
         <Section
