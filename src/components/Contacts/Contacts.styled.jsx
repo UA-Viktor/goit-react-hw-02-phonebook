@@ -1,24 +1,22 @@
 import styled from '@emotion/styled';
 
-export const Forma = styled.form`
+export const List = styled.ul`
   margin-top: 15px;
-`;
-
-export const Label = styled.label`
-  margin-top: 5px;
 
   display: flex;
   flex-direction: column;
-  width: 200px;
+  gap: 10px;
+
+  list-style: none;
 `;
 
-export const Input = styled.input`
-  margin-top: 5px;
+export const Item = styled.li`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Button = styled.button`
-  margin-top: 10px;
-
   border: none;
   text-decoration: none;
 
@@ -34,7 +32,7 @@ export const Button = styled.button`
   transition-duration: 0.4s;
 
   &:hover {
-    background-color: #55a391;
+    background-color: #d9877e;
     color: #f4efe3;
     border-radius: 15px;
   }

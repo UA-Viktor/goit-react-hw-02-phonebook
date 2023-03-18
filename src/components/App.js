@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { nanoid } from 'nanoid';
+import { Notify } from 'notiflix';
 
 import Section from './Section/Section';
 import Form from './Form/Form';
@@ -25,7 +26,8 @@ class App extends Component {
     };
 
     if (this.state.contacts.some(contact => contact.name === dataWithId.name)) {
-      alert(`${dataWithId.name} is already in contacts.`);
+      Notify.failure(`${dataWithId.name} is already in contacts.`);
+      // alert(`${dataWithId.name} is already in contacts.`);
       return;
     }
 
